@@ -1,0 +1,48 @@
+p53mdm2_we:
+  __meta__:
+    name: "P53-MDM2 mini WE simulations"
+    path: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS"
+    a_path: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/.analysis"
+  __all__: 
+    __all__:
+      w_assign:
+        checker:
+          call: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/.analysis/checks.w_assign"
+          file: "eassign.h5"
+        call: "/ihome/lchong/als251/apps/westpa/bin/w_assign"
+        args:
+          construct-dataset: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/plot_func.pull_assign_3d"
+          o: "eassign.h5"
+      w_kinetics:
+        checker:
+          call: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/.analysis/checks.w_kinetics"
+          file: "ekinetics.h5"
+        call: 
+          main: "/ihome/lchong/als251/apps/westpa/bin/w_kinetics"
+          sub: "trace"
+        args:
+          a: "eassign.h5"
+          o: "ekinetics.h5"
+    norm:
+      w_assign:
+        args:
+          bins-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_norm_3d.yaml"
+          states-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_norm_3d.yaml"
+    bnd:
+      w_assign:
+        args:
+          bins-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_bnd_3d.yaml"
+          states-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_bnd_3d.yaml"
+    enc:
+      w_assign:
+        args:
+          bins-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_enc_3d.yaml"
+          states-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_enc_3d.yaml"
+  mini_0_10_1:
+    __meta__:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.10_1"
+    __all__:
+      __all__:
+        args:
+          W: '/gscratch2/lchong/als251/P53_WE_SIMULATIONS/mini_0.10_1/west.h5'

@@ -1,0 +1,148 @@
+p53mdm2_we:
+  meta:
+    name: "P53-MDM2 mini WE simulations"
+    path: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS"
+  sims: 
+    all:
+      w_assign_enc:
+        call: "/ihome/lchong/als251/apps/westpa/bin/w_assign"
+        args:
+          bins-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_enc_3d.yaml"
+          states-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_enc_3d.yaml"
+          construct-dataset: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/plot_func.pull_assign_3d"
+          o: "eassign.h5"
+      w_kinetics_enc:
+        call: "/ihome/lchong/als251/apps/westpa/bin/w_assign"
+          subcall: "trace"
+        args:
+          a: "eassign.h5"
+          o: "ekinetics.h5"
+      w_assign_bnd:
+        call: "/ihome/lchong/als251/apps/westpa/bin/w_assign"
+        args:
+          bins-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_bnd_3d.yaml"
+          states-from-file: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/states_bnd_3d.yaml"
+          construct-dataset: "/gscratch2/lchong/als251/P53_WE_SIMULATIONS/analysis/Ali_analysis/mini_Hydro/plot_func.pull_assign_3d"
+          o: "eassign.h5"
+      w_kinetics_bnd:
+        call: "/ihome/lchong/als251/apps/westpa/bin/w_assign"
+          subcall: "trace"
+        args:
+          a: "eassign.h5"
+          o: "ekinetics.h5"
+  mini_0_10_1:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.10_1"
+    analyses:
+      all:
+          W: '/gscratch2/lchong/als251/P53_WE_SIMULATIONS/mini_0.10_1/west.h5'
+
+  mini_0_10_2:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.10_2"
+  mini_0_10_3:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.10_3"
+  mini_0_10_4:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.10_4"
+  mini_0_10_5:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.10_5"
+  mini_0_10_NoHI_1:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.10_NoHI_1"
+  mini_0_10_NoHI_2:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.10_NoHI_2"
+  mini_0_10_NoHI_3:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.10_NoHI_3"
+  mini_0_50_1:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.50_1"
+  mini_0_50_2:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.50_2"
+  mini_0_50_3:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.50_3"
+  mini_0_50_NoHI_1:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.50_NoHI_1"
+  mini_0_50_NoHI_2:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.50_NoHI_2"
+  mini_0_50_NoHI_3:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_0.50_NoHI_3"
+  mini_1_00_1:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_1.00_1"
+  mini_1_00_2:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_1.00_2"
+  mini_1_00_3:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_1.00_3"
+  mini_1_00_NoHI_1:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_1.00_NoHI_1"
+  mini_1_00_NoHI_2:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_1.00_NoHI_2"
+  mini_1_00_NoHI_3:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_1.00_NoHI_3"
+  mini_2_00_1:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_2.00_1"
+  mini_2_00_2:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_2.00_2"
+  mini_2_00_3:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_2.00_3"
+  mini_2_00_4:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_2.00_4"
+  mini_2_00_5:
+    meta:
+      name: "MiniWESTPA for alpha 0.10 with HI"
+      rel_path: "mini_2.00_5"
+  mini_2_00_NoHI_1:
+    meta:
+      name: "MiniWESTPA 1 for alpha 2.00 with HI"
+      rel_path: "mini_2.00_NoHI_1"
+  mini_2_00_NoHI_2:
+    meta:
+      name: "MiniWESTPA 2 for alpha 2.00 with HI"
+      rel_path: "mini_2.00_NoHI_2"
+  mini_2_00_NoHI_3:
+    meta:
+      name: "MiniWESTPA 3 for alpha 2.00 with HI"
+      rel_path: "mini_2.00_NoHI_3"
