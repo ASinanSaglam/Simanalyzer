@@ -8,6 +8,7 @@ from analysis_runner import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-yaml', dest="yaml", type=str, help='Yaml file containing the simulation info')
+parser.add_argument('-i', dest="inter", type=bool, default=False, help='Interactive - Not implemented yet')
 args = parser.parse_args()
 
 ## The main purpose of this file is to 
